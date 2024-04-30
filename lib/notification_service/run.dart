@@ -6,15 +6,13 @@ import 'package:yertay_tech/notification_service/services/sms_notification_servi
 import 'models/email_notification.dart';
 
 void main() {
-
+  
   final emailNotificationProvider = EmailNotificationProviderImpl();
   final emailNotificationService = EmailNotificationService(emailNotificationProvider);
   final smsNotificationService = SmsNotificationService();
 
-  final emailNotificationContent = EmailNotification(
-    text: "Content",
-    email: 'contact@yertay.com',
-  );
+  final emailNotificationContent =
+      EmailNotification(text: "Content", email: 'contact@yertay.com');
 
   final smsNotificationContent = SmsNotification(
     text: 'Hello',
